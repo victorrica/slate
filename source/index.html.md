@@ -1,15 +1,11 @@
 ---
-title: API Reference
+title: Domain Reseller API
 
 language_tabs:
-  - shell
-  - ruby
-  - python
-  - javascript
+  - PHP
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
+  - <a href='https://form.office.naver.com/form/responseView.cmd?formkey=MThkOGEyY2EtNmQzZS00NjY5LWFlMTItMjAwZDAyYjJmZWU1&sourceId=urlshare'>Being Partner Application</a>
 
 includes:
   - errors
@@ -19,50 +15,30 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the Dotname Korea Domain Reseller API!<br>
+Only reseller can use our API to access registering and managing *.KR* Domain.
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+This document and the program are prohibited from unauthorized distribution and can not be changed and used without permission of Inc. DotnameKorea.
 
-This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+Api document example code is on [Here](https://github.com/tripit/slate).
+
+If you have any problem contact us.<br>
+Tel. ( 0506 - 780 - 9000 )<br>
+Email. ( dev@dotnamekorea.com )
 
 # Authentication
 
-> To authorize, use this code:
+Domain Reseller acount credenctial uses as API keys to allow access to the API. You can register reseller accounts on this [Application](https://form.office.naver.com/form/responseView.cmd?formkey=MThkOGEyY2EtNmQzZS00NjY5LWFlMTItMjAwZDAyYjJmZWU1&sourceId=urlshare).
 
-```ruby
-require 'kittn'
+### Query Parameters
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-```
-
-> Make sure to replace `meowmeowmeow` with your API key.
-
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
+Parameter | Default | Description
+--------- | ------- | -----------
+id | false | Reseller account ID
+pw | false | Reseller account Password
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+You must send with your credential of your reseller account on whole APIs.
 </aside>
 
 # Kittens
